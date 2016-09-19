@@ -42,8 +42,8 @@ it might have happened that we for some block, got two key-bytes which
 both produce valid base64 data (i.e., both are valid key-bytes, as far
 as `find_pad` is concerned).
 
-Finally, we can read the key back, the encrypted data, and decrypt it
-with an elegant python one-liner:
+We can read the key back and the encrypted data, and decrypt it with
+an elegant python one-liner:
 
 `
 p = ''.join([chr(f[i] ^ k[i][0]) for i in range(PAD_LEN)])
